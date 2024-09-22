@@ -21,6 +21,8 @@ int main()
 		std::cout << '\n';
 	}*/
 
+	//comment
+
 	std::cout << "Write 1st num: ";
 	std::cin >> firstNum;
 
