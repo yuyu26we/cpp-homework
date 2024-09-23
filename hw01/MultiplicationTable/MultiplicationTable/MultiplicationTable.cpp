@@ -1,33 +1,48 @@
 ﻿#include <iostream>
 
-const int mTableRows = 8;
-const int mTableCols = 8;
+const int TABLESIZE = 9;
 
 int main()
 {
-	int multiplicationTable[mTableRows][mTableCols];
+	int multiplicationTable[TABLESIZE][TABLESIZE];
 	int firstNum = 0;
 	int secondNum = 0;
 
-	for (int i = 0; i < mTableRows; i++)
-		for (int j = 0; j < mTableCols; j++)
-			multiplicationTable[i][j] = (i + 2) * (j + 2);
+	for (int i = 0; i < TABLESIZE; i++)
+		for (int j = 0; j < TABLESIZE; j++)
+			multiplicationTable[i][j] = (i + 1) * (j + 1);
 
-	/*for (int i = 0; i < mTableRows; i++) {
-		for (int j = 0; j < mTableCols; j++)
+	for (int i = 0; i < TABLESIZE; i++) {
+		for (int j = 0; j < TABLESIZE; j++)
 		{
 			std::cout << multiplicationTable[i][j] << '\t' << ' ';
 		}
-		std::cout << '\n';
-	}*/
+		std::cout << std::endl;
+	}
+	std::cout << std::endl;
 
-	//comment
+	int test = 0;
 
-	std::cout << "Write 1st num: ";
-	std::cin >> firstNum;
+	while(true)
+	{
+		std::cout << "Write 1st num: ";
+		std::cin >> firstNum;
 
-	std::cout << "Write 2st num: ";
-	std::cin >> secondNum;
+		std::cout << "Write 2st num: ";
+		std::cin >> secondNum;
 
-	std::cout << "Result: " << multiplicationTable[firstNum - 2][secondNum - 2];
+		if (firstNum == 0 || secondNum == 0) 
+		{
+			std::cout << "Program closed" << std::endl;
+			break;
+		}
+		else if ((0 > firstNum || firstNum > TABLESIZE) || (0 > secondNum || secondNum > TABLESIZE))
+		{
+			std::cout << "Count by yourself \n" << std::endl;
+			continue;
+		}
+
+		std::cout << "Result: " << multiplicationTable[firstNum - 1][secondNum - 1] << "\n" << std::endl;
+	}
 }
+	
