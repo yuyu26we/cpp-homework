@@ -21,9 +21,7 @@ int main()
 	}
 	std::cout << std::endl;
 
-	int test = 0;
-
-	while(true)
+	do 
 	{
 		std::cout << "Write 1st num: ";
 		std::cin >> firstNum;
@@ -31,7 +29,9 @@ int main()
 		std::cout << "Write 2st num: ";
 		std::cin >> secondNum;
 
-		if (firstNum == 0 || secondNum == 0) 
+		std::cout << std::endl;
+
+		if (firstNum == 0 || secondNum == 0)
 		{
 			std::cout << "Program closed" << std::endl;
 			break;
@@ -43,6 +43,6 @@ int main()
 		}
 
 		std::cout << "Result: " << multiplicationTable[firstNum - 1][secondNum - 1] << "\n" << std::endl;
-	}
+	} while (firstNum != 0 || secondNum != 0);
 }
 	
