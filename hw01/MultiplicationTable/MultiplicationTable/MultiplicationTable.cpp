@@ -21,7 +21,7 @@ int main()
 	}
 	std::cout << std::endl;
 
-	do 
+	while (true)
 	{
 		std::cout << "Write 1st num: ";
 		std::cin >> firstNum;
@@ -36,13 +36,13 @@ int main()
 			std::cout << "Program closed" << std::endl;
 			break;
 		}
-		else if ((0 > firstNum || firstNum > TABLESIZE) || (0 > secondNum || secondNum > TABLESIZE))
+		if ((0 > firstNum || firstNum > TABLESIZE) || (0 > secondNum || secondNum > TABLESIZE))
 		{
 			std::cout << "Count by yourself \n" << std::endl;
 			continue;
 		}
 
 		std::cout << "Result: " << multiplicationTable[firstNum - 1][secondNum - 1] << "\n" << std::endl;
-	} while (firstNum != 0 && secondNum != 0);
+	} 
 }
 	
