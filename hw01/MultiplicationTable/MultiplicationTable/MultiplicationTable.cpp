@@ -43,6 +43,6 @@ int main()
 		}
 
 		std::cout << "Result: " << multiplicationTable[firstNum - 1][secondNum - 1] << "\n" << std::endl;
-	} while (firstNum != 0 || secondNum != 0);
+	} while (firstNum != 0 && secondNum != 0);
 }
 	
