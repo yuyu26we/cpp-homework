@@ -1,9 +1,9 @@
 ﻿#include <iostream>
 
-const int TABLESIZE = 9;
-
 int main()
 {
+	const int TABLESIZE = 9;
+
 	int multiplicationTable[TABLESIZE][TABLESIZE];
 	int firstNum = 0;
 	int secondNum = 0;
