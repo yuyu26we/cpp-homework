@@ -36,7 +36,7 @@ int main()
 			std::cout << "Program closed" << std::endl;
 			break;
 		}
-		if ((0 > firstNum || firstNum > TABLESIZE) || (0 > secondNum || secondNum > TABLESIZE))
+		if ((firstNum < 0 || firstNum > TABLESIZE) || (secondNum < 0 || secondNum > TABLESIZE))
 		{
 			std::cout << "Count by yourself \n" << std::endl;
 			continue;
