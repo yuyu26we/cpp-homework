@@ -8,13 +8,10 @@ int main()
 	int firstNum = 0;
 	int secondNum = 0;
 
-	for (int i = 0; i < TABLESIZE; i++)
-		for (int j = 0; j < TABLESIZE; j++)
-			multiplicationTable[i][j] = (i + 1) * (j + 1);
-
 	for (int i = 0; i < TABLESIZE; i++) {
 		for (int j = 0; j < TABLESIZE; j++)
 		{
+			multiplicationTable[i][j] = (i + 1) * (j + 1);
 			std::cout << multiplicationTable[i][j] << '\t' << ' ';
 		}
 		std::cout << std::endl;
