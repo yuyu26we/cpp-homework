@@ -1,4 +1,4 @@
-#include <iostream>
+п»ї#include <iostream>
 #include <string>
 #include <cstdlib>
 
@@ -16,26 +16,26 @@ struct Turn
 };
 
 //tictactoe funcs
-void DrawGrid(int grid[][3], int gridSize); //Отрисовывает игровое поле
+void DrawGrid(int grid[][3], int gridSize); //РћС‚СЂРёСЃРѕРІС‹РІР°РµС‚ РёРіСЂРѕРІРѕРµ РїРѕР»Рµ
 
-void SetupPlayers(string players[]); //Именует игроков
+void SetupPlayers(string players[]); //РРјРµРЅСѓРµС‚ РёРіСЂРѕРєРѕРІ
 
-int ChooseLuckyOne(); //Выбирает кто будет ходить первым 
+int ChooseLuckyOne(); //Р’С‹Р±РёСЂР°РµС‚ РєС‚Рѕ Р±СѓРґРµС‚ С…РѕРґРёС‚СЊ РїРµСЂРІС‹Рј 
 
-//Делает ход игрока под индексом playerThatMovesIndex, если под players[playerThatMovesIndex] - "bot", то отрабатывает логика бота
+//Р”РµР»Р°РµС‚ С…РѕРґ РёРіСЂРѕРєР° РїРѕРґ РёРЅРґРµРєСЃРѕРј playerThatMovesIndex, РµСЃР»Рё РїРѕРґ players[playerThatMovesIndex] - "bot", С‚Рѕ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµС‚ Р»РѕРіРёРєР° Р±РѕС‚Р°
 void MakeMove(int grid[][3], int gridSize, string players[], int playerThatMovesIndex, int goesFirst); 
 
-//Логика ходьбы бота
+//Р›РѕРіРёРєР° С…РѕРґСЊР±С‹ Р±РѕС‚Р°
 void BotMove(int grid[][3], int gridSize, string players[], int playerThatMovesIndex, int goesFirst);
 
-//Запуск игры
+//Р—Р°РїСѓСЃРє РёРіСЂС‹
 void StartGame(int grid[][3], int gridSize, string players[]);
 
-//Сбрасывает переменные игрового поля
+//РЎР±СЂР°СЃС‹РІР°РµС‚ РїРµСЂРµРјРµРЅРЅС‹Рµ РёРіСЂРѕРІРѕРіРѕ РїРѕР»СЏ
 void ResetGame(int grid[][3], int gridSize, string players[]);
 
-//Возвращает состояние игры на момент вызова
+//Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРѕСЃС‚РѕСЏРЅРёРµ РёРіСЂС‹ РЅР° РјРѕРјРµРЅС‚ РІС‹Р·РѕРІР°
 GameStatement CheckGameStatement(int grid[][3], int gridSize);
 
-//Возвращает сконвертированный введенный ход игрока из string, в структуру Turn
+//Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РІРІРµРґРµРЅРЅС‹Р№ С…РѕРґ РёРіСЂРѕРєР° РёР· string, РІ СЃС‚СЂСѓРєС‚СѓСЂСѓ Turn
 Turn ConvertTurn(string turn);

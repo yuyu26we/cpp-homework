@@ -1,4 +1,4 @@
-#include "TICTACTOE_H.h"
+ï»¿#include "TICTACTOE_H.h"
 
 void DrawGrid(int grid[][3], int gridSize)
 {
@@ -88,7 +88,7 @@ void MakeMove(int grid[][3], int gridSize, string players[], int playerThatMoves
 	cout << playerName << "'s" << " turn." << endl;
 	cout << endl;
 
-	//Ëîãèêà õîäà èãðîêà
+	//Ð›Ð¾Ð³Ð¸ÐºÐ° Ñ…Ð¾Ð´Ð° Ð¸Ð³Ñ€Ð¾ÐºÐ°
 	if (playerName.substr(0, 3) != "bot")
 	{
 		string turn = "";
@@ -118,7 +118,7 @@ void MakeMove(int grid[][3], int gridSize, string players[], int playerThatMoves
 	}
 
 
-	//Ëîãèêà õîäà áîòà
+	//Ð›Ð¾Ð³Ð¸ÐºÐ° Ñ…Ð¾Ð´Ð° Ð±Ð¾Ñ‚Ð°
 	else { BotMove(grid, gridSize, players, playerThatMovesIndex, goesFirst); }
 }
 
@@ -200,7 +200,7 @@ void BotMove(int grid[][3], int gridSize, string players[], int playerThatMovesI
 	Turn coordsOfBestTurn;
 	bool isBestTurnFound = false;
 
-	//Îïðåäåëåíèå øàãà ïîáåäû/çàùèòû äëÿ ãîðèçîíòàëåé
+	//ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ ÑˆÐ°Ð³Ð° Ð¿Ð¾Ð±ÐµÐ´Ñ‹/Ð·Ð°Ñ‰Ð¸Ñ‚Ñ‹ Ð´Ð»Ñ Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»ÐµÐ¹
 	for (int i = 0; i < gridSize; i++)
 	{
 		for (int j = 0; j < gridSize; j++)
@@ -228,7 +228,7 @@ void BotMove(int grid[][3], int gridSize, string players[], int playerThatMovesI
 		indexOfEmptySlotToTurn = -1;
 	}
 
-	//Îïðåäåëåíèå øàãà ïîáåäû/çàùèòû äëÿ âåðòèêàëåé
+	//ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ ÑˆÐ°Ð³Ð° Ð¿Ð¾Ð±ÐµÐ´Ñ‹/Ð·Ð°Ñ‰Ð¸Ñ‚Ñ‹ Ð´Ð»Ñ Ð²ÐµÑ€Ñ‚Ð¸ÐºÐ°Ð»ÐµÐ¹
 	for (int i = 0; i < gridSize; i++)
 	{
 		for (int j = 0; j < gridSize; j++)
@@ -256,7 +256,7 @@ void BotMove(int grid[][3], int gridSize, string players[], int playerThatMovesI
 		indexOfEmptySlotToTurn = -1;
 	}
 
-	//Îïðåäåëåíèå øàãà ïîáåäû/çàùèòû äëÿ 1 äèàãîíàëè
+	//ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ ÑˆÐ°Ð³Ð° Ð¿Ð¾Ð±ÐµÐ´Ñ‹/Ð·Ð°Ñ‰Ð¸Ñ‚Ñ‹ Ð´Ð»Ñ 1 Ð´Ð¸Ð°Ð³Ð¾Ð½Ð°Ð»Ð¸
 	for (int i = 0; i < gridSize; i++)
 	{
 		if (grid[i][i] == codedEnemySide) { countOfEnemyStreak++; }
@@ -282,7 +282,7 @@ void BotMove(int grid[][3], int gridSize, string players[], int playerThatMovesI
 	countOfBotStreak = 0;
 	indexOfEmptySlotToTurn = -1;
 
-	//Îïðåäåëåíèå øàãà ïîáåäû/çàùèòû äëÿ 2 äèàãîíàëè
+	//ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ ÑˆÐ°Ð³Ð° Ð¿Ð¾Ð±ÐµÐ´Ñ‹/Ð·Ð°Ñ‰Ð¸Ñ‚Ñ‹ Ð´Ð»Ñ 2 Ð´Ð¸Ð°Ð³Ð¾Ð½Ð°Ð»Ð¸
 	for (int i = 0; i < gridSize; i++)
 	{
 		if (grid[gridSize - i - 1][gridSize - i - 1] == codedEnemySide) { countOfEnemyStreak++; }
@@ -308,19 +308,19 @@ void BotMove(int grid[][3], int gridSize, string players[], int playerThatMovesI
 	countOfBotStreak = 0;
 	indexOfEmptySlotToTurn = -1;
 
-	//Îïðåäåëåíèå îïòèìàëüíîãî õîäà åñëè íåò âîçìîæíîñòè âûèãðàòü è íå íóæíî çàùèùàòüñÿ
+	//ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð¾Ð¿Ñ‚Ð¸Ð¼Ð°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ñ…Ð¾Ð´Ð° ÐµÑÐ»Ð¸ Ð½ÐµÑ‚ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚Ð¸ Ð²Ñ‹Ð¸Ð³Ñ€Ð°Ñ‚ÑŒ Ð¸ Ð½Ðµ Ð½ÑƒÐ¶Ð½Ð¾ Ð·Ð°Ñ‰Ð¸Ñ‰Ð°Ñ‚ÑŒÑÑ
 	if (!isBestTurnFound)
 	{
-		//Ïîïûòàòüñÿ çàíÿòü öåíòð
+		//ÐŸÐ¾Ð¿Ñ‹Ñ‚Ð°Ñ‚ÑŒÑÑ Ð·Ð°Ð½ÑÑ‚ÑŒ Ñ†ÐµÐ½Ñ‚Ñ€
 		if (grid[1][1] == 0) { coordsOfBestTurn.x = 1; coordsOfBestTurn.y = 1; }
 
-		//Ïîïûòàòüñÿ çàíÿòü îäèí èç óãëîâ
+		//ÐŸÐ¾Ð¿Ñ‹Ñ‚Ð°Ñ‚ÑŒÑÑ Ð·Ð°Ð½ÑÑ‚ÑŒ Ð¾Ð´Ð¸Ð½ Ð¸Ð· ÑƒÐ³Ð»Ð¾Ð²
 		else if (grid[0][0] == 0) { coordsOfBestTurn.x = 0; coordsOfBestTurn.y = 0; }
 		else if (grid[2][0] == 0) { coordsOfBestTurn.x = 2; coordsOfBestTurn.y = 0; }
 		else if (grid[0][2] == 0) { coordsOfBestTurn.x = 0; coordsOfBestTurn.y = 2; }
 		else if (grid[2][2] == 0) { coordsOfBestTurn.x = 2; coordsOfBestTurn.y = 2; }
 
-		//Ïîïûòàòüñÿ çàíÿòü îäèí èç áîêîâûõ öåíòðîâ
+		//ÐŸÐ¾Ð¿Ñ‹Ñ‚Ð°Ñ‚ÑŒÑÑ Ð·Ð°Ð½ÑÑ‚ÑŒ Ð¾Ð´Ð¸Ð½ Ð¸Ð· Ð±Ð¾ÐºÐ¾Ð²Ñ‹Ñ… Ñ†ÐµÐ½Ñ‚Ñ€Ð¾Ð²
 		else if (grid[0][1] == 0) { coordsOfBestTurn.x = 0; coordsOfBestTurn.y = 1; }
 		else if (grid[1][0] == 0) { coordsOfBestTurn.x = 1; coordsOfBestTurn.y = 0; }
 		else if (grid[1][2] == 0) { coordsOfBestTurn.x = 1; coordsOfBestTurn.y = 2; }
