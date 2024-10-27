@@ -369,4 +369,3 @@ Turn ConvertTurn(string turn)
 
 	return convertedTurn;
 }
-
