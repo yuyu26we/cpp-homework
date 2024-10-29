@@ -3,9 +3,21 @@
 int main()
 {
     vector<Note> notebook {};
-    CreateNote(notebook);
 
+    while (true) 
+    {
+        string answer;
 
+        printf("Write new contact\n");
+        CreateNote(notebook);
+
+        printf("Add one more contact? (y/n): ");
+        cin >> answer;
+        if (answer == "y") { continue; }
+        else if (answer == "n") { break; }
+    }
+
+    SearchNotes(notebook);
 }
 
 void CreateNote(vector<Note>& notebook)
@@ -50,7 +62,30 @@ void CreateNote(vector<Note>& notebook)
     notebook.push_back(newNote);
 }
 
-Note& SearchNote(vector<Note>& notebook) 
+void SearchNotes(vector<Note>& notebook) 
 {
+    string detail;
 
+    printf("Enter contact detail: ");
+    cin >> detail;
+
+    bool isAtLeastOneFound = false;
+
+    printf("List of founded: ");
+
+    for (const Note& note : notebook)
+    {
+        int counter = 0;
+        if (to_string(note.mobileNumber) == detail || note.name == detail || note.surname == detail) 
+        {
+            counter++;
+            isAtLeastOneFound = true;
+            printf("%i---------------", counter);
+            printf("Name: %s\n", note.name);
+            printf("Surname: %s\n", note.surname);
+            printf("Mobile number: %i\n", note.mobileNumber);
+            printf("Gender: %s\n", (note.gender == Gender::Male) ? "Male" : "Female");
+            printf("----------------");
+        }
+    }
 }

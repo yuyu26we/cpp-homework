@@ -19,4 +19,4 @@ struct Note
 };
 
 void CreateNote(vector<Note>& notebook);
-Note& SearchNote(vector<Note>& notebook);
+void SearchNotes(vector<Note>& notebook);
