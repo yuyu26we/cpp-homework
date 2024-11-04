@@ -1,4 +1,4 @@
 ﻿  Notebook.cpp
-C:\Users\Viktor\Desktop\pr\git-clones\cpp-homework\hw03\Notebook\Notebook\Notebook.cpp(84,20): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'const std::string'
-C:\Users\Viktor\Desktop\pr\git-clones\cpp-homework\hw03\Notebook\Notebook\Notebook.cpp(85,20): warning C4477: 'printf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'const std::string'
-  Notebook.vcxproj -> C:\Users\Viktor\Desktop\pr\git-clones\cpp-homework\hw03\Notebook\Debug\Notebook.exe
+C:\Users\Yuwe\Desktop\UnrealHomeWork\cpp-homework\hw03\Notebook\Notebook\Notebook.cpp(84,20): warning C4477: "printf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "const std::string"
+C:\Users\Yuwe\Desktop\UnrealHomeWork\cpp-homework\hw03\Notebook\Notebook\Notebook.cpp(85,20): warning C4477: "printf": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "const std::string"
+  Notebook.vcxproj -> C:\Users\Yuwe\Desktop\UnrealHomeWork\cpp-homework\hw03\Notebook\Debug\Notebook.exe
